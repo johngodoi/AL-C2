@@ -1,0 +1,5 @@
+a=2
+b=4
+area = ( b * a ) / 2
+if ( area > 10) x = 1
+else x = 0
