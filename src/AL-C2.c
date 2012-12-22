@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : AL-C2.c
- Author      : John Godoi
+ Author      : John Godoi, Vitor Lima
  Version     :
  Copyright   : Creative Commons - By
  Description : Hello World in C, Ansi-style
