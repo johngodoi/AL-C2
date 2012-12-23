@@ -1,9 +1,13 @@
 /*
- * Analyser.c
- * Arquivo com funções utilitárias para análise léxica do arquivo
- *  Created on: 23/12/2012
- *      Author: john
- */
+ ============================================================================
+ Name        : Analyser.c
+ Author      : John Godoi, Vitor Lima
+ Created on  : 23/12/2012
+ Version     :
+ Copyright   : Creative Commons - By
+ Description : Arquivo com funções utilitárias para análise léxica do arquivo
+ ============================================================================
+*/
 
 #include "Analyser.h"
 #include "stdlib.h"

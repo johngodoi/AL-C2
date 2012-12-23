@@ -1,9 +1,13 @@
 /*
- * ArquivoTypes.h
- *
- *  Created on: 23/12/2012
- *      Author: john
- */
+ ============================================================================
+ Name        : ArquivoTypes.h
+ Author      : John Godoi, Vitor Lima
+ Created on  : 23/12/2012
+ Version     :
+ Copyright   : Creative Commons - By
+ Description : Utilitários para as estruturas de armazenamento do arquivo
+ ============================================================================
+*/
 
 #ifndef ARQUIVOTYPES_H_
 #define ARQUIVOTYPES_H_

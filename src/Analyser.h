@@ -1,9 +1,13 @@
 /*
- * Analyser.h
- * Arquivo com as funções que fazem a análise dos Tokens
- *  Created on: 23/12/2012
- *      Author: john
- */
+ ============================================================================
+ Name        : Analyser.h
+ Author      : John Godoi, Vitor Lima
+ Created on  : 23/12/2012
+ Version     :
+ Copyright   : Creative Commons - By
+ Description : Arquivo com as funções que fazem a análise dos Tokens
+ ============================================================================
+*/
 
 #include "TokenTypes.h"
 #include "ArquivoTypes.h"

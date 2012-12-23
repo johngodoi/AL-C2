@@ -1,9 +1,14 @@
 /*
- * file.c
- *
- *  Created on: 23/12/2012
- *      Author: john
- */
+ ============================================================================
+ Name        : file.c
+ Author      : John Godoi, Vitor Lima
+ Created on  : 23/12/2012
+ Version     :
+ Copyright   : Creative Commons - By
+ Description : Responsável pelo manuseio do arquivo
+ ============================================================================
+*/
+
 #include "file.h"
 
 void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada);

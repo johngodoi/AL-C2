@@ -1,9 +1,14 @@
 /*
- * Parser.c
- *
- *  Created on: 22/12/2012
- *      Author: john
- */
+ ============================================================================
+ Name        : Parser.c
+ Author      : John Godoi, Vitor Lima
+ Created on  : 23/12/2012
+ Version     :
+ Copyright   : Creative Commons - By
+ Description : Arquivo responsável por traduzir o conteúdo do arquivo para os
+               Tokens
+ ============================================================================
+*/
 
 #include "Parser.h"
 
