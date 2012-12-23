@@ -16,4 +16,6 @@ typedef struct {
 	int tam_positions;
 }TArquivo;
 
+int verifyEmptyChars(char c);
+
 #endif /* ARQUIVOTYPES_H_ */

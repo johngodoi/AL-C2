@@ -1,5 +1,5 @@
-a<ERR>  =<ERR>  2<ERR> 
-b<ERR>  =<ERR>  4<ERR> 
-area<ERR>  =<ERR>  (<ERR>  b<ERR>  *<ERR>  a<ERR>  )<ERR>  /<ERR>  2<ERR> 
-if<ERR>  (<ERR>  area<ERR>  ><ERR>  10<ERR>  )<ERR>  x<ERR>  =<ERR>  1<ERR> 
-else<ERR>  x<ERR>  =<ERR>  0<ERR> 
+a <ERR> = <ERR> 2 <ERR>
+b <ERR> = <ERR> 4 <ERR>
+area <ERR> = <ERR> ( <ERR> b <ERR> * <ERR> a <ERR> ) <ERR> / <ERR> 2 <ERR>
+if <ERR> ( <ERR> area <ERR> > <ERR> 10 <ERR> ) <ERR> x <ERR> = <ERR> 1 <ERR>
+else <ERR> x <ERR> = <ERR> 0 <ERR>

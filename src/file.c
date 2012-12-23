@@ -10,7 +10,6 @@ void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada);
 void carrega_caracteres(TArquivo *arquivo, FILE *entrada);
 void carrega_posicoes(TArquivo *arquivo);
 void alocaVetores(TArquivo *arquivo);
-int verifyEmptyChars(char c);
 void translateTokenIDToName(int token, FILE *saida);
 char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida);
 
@@ -94,12 +93,6 @@ void carrega_posicoes(TArquivo *arquivo) {
 	printf("QtdPalavras identificadas: %d\n", j);
 }
 
-int verifyEmptyChars(char c) {
-	if (c == ' ' || c == '\n' || c=='\r')
-		return 1;
-	return 0;
-}
-
 void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
 	int i;
 	char c;
@@ -123,5 +116,5 @@ char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
 
 void translateTokenIDToName(int token, FILE *saida){
 	char *tokenNames[] = {"ERR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID","PR"};
-	fprintf(saida,"<%s> ",tokenNames[token]);
+	fprintf(saida," <%s>",tokenNames[token]);
 }
