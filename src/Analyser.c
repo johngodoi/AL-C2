@@ -99,7 +99,14 @@ int analyseNUM(char *word){
 }
 
 int analyseID(char *word){
-	int result = ERR;
-	if(strcmp(word,">=")==0) result = MAIG;
+	int result = ID;
+
+	int i=0;
+	if(isalpha(word[i])){
+		for(i = 1 ; word[i] != '\0' ; i++){
+			if (! isalnum(word[i])) return ERR;
+		}
+	}else return ERR;
+
 	return result;
 }

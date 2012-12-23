@@ -1,5 +1,0 @@
-a <ERR> = <AT> 2 <NUM>
-b <ERR> = <AT> 4 <NUM>
-area <ERR> = <AT> ( <AP> b <ERR> * <MUL> a <ERR> ) <FP> / <DIV> 2 <NUM>
-if <PR> ( <AP> area <ERR> > <MAIOR> 10 <NUM> ) <FP> x <ERR> = <AT> 1 <NUM>
-else <PR> x <ERR> = <AT> 0 <NUM>
