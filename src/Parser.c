@@ -75,7 +75,10 @@ char * recoverWord(TArquivo *arquivo,int initialPositionWord){
 	char *word=(char*)malloc(sizeof(char)*wordSize);
 	word[wordSize-1]='\0';
 	for(i=firstChar;i<lastChar;i++){
-		word[j]=arquivo->buffer_original[i];
+		if (verifyEmptyChars(arquivo->buffer_original[i]) != 1)
+			word[j] = arquivo->buffer_original[i];
+		else
+			word[j] = '\0';
 		j++;
 	}
 	return word;

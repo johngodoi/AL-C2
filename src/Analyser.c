@@ -91,8 +91,8 @@ int analyseNUM(char *word){
 	int result = NUM;
 	
 	int i = 0;
-	for(i = 0 ; word[i] != '\0'; i++){
-		if (! isdigit(word[i])) return ERR;
+	for (i = 0; word[i] != '\0'; i++) {
+			if (!isdigit(word[i])) return ERR;
 	}
 	
 	return result;
