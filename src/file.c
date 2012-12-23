@@ -96,3 +96,7 @@ int verifyEmptyChars(char c) {
 		return 1;
 	return 0;
 }
+
+void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
+
+}

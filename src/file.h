@@ -12,5 +12,6 @@
 #define FILEH
 
 TArquivo* carrega_arquivo(FILE *entrada);
+void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida);
 #endif
 

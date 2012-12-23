@@ -11,34 +11,34 @@
 #ifndef ANALYSER_H_
 #define ANALYSER_H_
 
-TokensType analyseAT(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseAT(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseMENOR(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseMENOR(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseMAIOR(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseMAIOR(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseMEIG(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseMEIG(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseMAIG(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseMAIG(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseIG(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseIG(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseSOM(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseSOM(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseSUB(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseSUB(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseMUL(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseMUL(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseDIV(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseDIV(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseAP(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseAP(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseFP(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseFP(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseNUM(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseNUM(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analyseID(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analyseID(TArquivo *arquivo, int initialPositionWord);
 
-TokensType analysePR(TArquivo *arquivo, int initialPositionWord, int positionNextWord);
+int analysePR(TArquivo *arquivo, int initialPositionWord);
 
 #endif /* ANALYSER_H_ */
