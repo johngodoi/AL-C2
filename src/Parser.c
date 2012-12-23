@@ -11,6 +11,7 @@
 */
 
 #include "Parser.h"
+#include "stdlib.h"
 
 int analyse( int analyser, char *word);
 char * recoverWord(TArquivo *arquivo,int initialPositionWord);
