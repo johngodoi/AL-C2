@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/AL-C2.c 
+../src/AL-C2.c \
+../src/Parser.c 
 
 OBJS += \
-./src/AL-C2.o 
+./src/AL-C2.o \
+./src/Parser.o 
 
 C_DEPS += \
-./src/AL-C2.d 
+./src/AL-C2.d \
+./src/Parser.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
