@@ -7,6 +7,7 @@
 
 #include "Analyser.h"
 #include "stdlib.h"
+#include <ctype.h>
 
 int analysePR(char *word){
 	int result = ERR;
@@ -45,37 +46,60 @@ int analyseMAIG(char *word){
 }
 
 int analyseIG(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"==")==0) result = IG;
+	return result;
 }
 
 int analyseSOM(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"+")==0) result = SOM;
+	return result;
 }
 
 int analyseSUB(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"-")==0) result = SUB;
+	return result;
 }
 
 int analyseMUL(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"*")==0) result = MUL;
+	return result;
 }
 
 int analyseDIV(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"/")==0) result = DIV;
+	return result;
 }
 
 int analyseAP(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,"(")==0) result = AP;
+	return result;
 }
 
 int analyseFP(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,")")==0) result = FP;
+	return result;
 }
 
 int analyseNUM(char *word){
-	return ERR;
+	int result = NUM;
+	
+	int i = 0;
+	for(i = 0 ; word[i] != '\0'; i++){
+		if (! isdigit(word[i])) return ERR;
+	}
+	
+	return result;
 }
 
 int analyseID(char *word){
-	return ERR;
+	int result = ERR;
+	if(strcmp(word,">=")==0) result = MAIG;
+	return result;
 }

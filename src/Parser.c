@@ -39,6 +39,24 @@ int analyse(int analyser, char *word){
 		return analyseMEIG(word);
 	case MAIG:
 		return analyseMAIG(word);
+	case IG:
+		return analyseIG(word);
+	case SOM:
+		return analyseSOM(word);
+	case SUB:
+		return analyseSUB(word);
+	case MUL:
+		return analyseMUL(word);
+	case DIV:
+		return analyseDIV(word);
+	case AP:
+		return analyseAP(word);
+	case FP:
+		return analyseFP(word);
+	case NUM:
+		return analyseNUM(word);
+	case ID:
+		return analyseID(word);
 	default:
 		return ERR;
 	}
