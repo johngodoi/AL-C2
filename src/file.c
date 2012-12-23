@@ -115,6 +115,6 @@ char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
 }
 
 void translateTokenIDToName(int token, FILE *saida){
-	char *tokenNames[] = {"ERR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID","PR"};
+	char *tokenNames[] = {"ERR","PR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID"};
 	fprintf(saida," <%s>",tokenNames[token]);
 }

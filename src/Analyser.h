@@ -7,38 +7,39 @@
 
 #include "TokenTypes.h"
 #include "ArquivoTypes.h"
+#include "string.h"
 
 #ifndef ANALYSER_H_
 #define ANALYSER_H_
 
-int analyseAT(TArquivo *arquivo, int initialPositionWord);
+int analyseAT(char *word);
 
-int analyseMENOR(TArquivo *arquivo, int initialPositionWord);
+int analyseMENOR(char *word);
 
-int analyseMAIOR(TArquivo *arquivo, int initialPositionWord);
+int analyseMAIOR(char *word);
 
-int analyseMEIG(TArquivo *arquivo, int initialPositionWord);
+int analyseMEIG(char *word);
 
-int analyseMAIG(TArquivo *arquivo, int initialPositionWord);
+int analyseMAIG(char *word);
 
-int analyseIG(TArquivo *arquivo, int initialPositionWord);
+int analyseIG(char *word);
 
-int analyseSOM(TArquivo *arquivo, int initialPositionWord);
+int analyseSOM(char *word);
 
-int analyseSUB(TArquivo *arquivo, int initialPositionWord);
+int analyseSUB(char *word);
 
-int analyseMUL(TArquivo *arquivo, int initialPositionWord);
+int analyseMUL(char *word);
 
-int analyseDIV(TArquivo *arquivo, int initialPositionWord);
+int analyseDIV(char *word);
 
-int analyseAP(TArquivo *arquivo, int initialPositionWord);
+int analyseAP(char *word);
 
-int analyseFP(TArquivo *arquivo, int initialPositionWord);
+int analyseFP(char *word);
 
-int analyseNUM(TArquivo *arquivo, int initialPositionWord);
+int analyseNUM(char *word);
 
-int analyseID(TArquivo *arquivo, int initialPositionWord);
+int analyseID(char *word);
 
-int analysePR(TArquivo *arquivo, int initialPositionWord);
+int analysePR(char *word);
 
 #endif /* ANALYSER_H_ */

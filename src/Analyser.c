@@ -6,63 +6,66 @@
  */
 
 #include "Analyser.h"
+#include "stdlib.h"
 
-int analysePR(TArquivo *arquivo, int initialPositionWord){
+int analysePR(char *word){
+	int result = ERR;
+	if(strcmp(word,"if")==0 || strcmp(word,"else")==0) result= PR;
+	return result;
+}
+
+int analyseAT(char *word){
 	return ERR;
 }
 
-int analyseAT(TArquivo *arquivo, int initialPositionWord){
+int analyseMENOR(char *word){
 	return ERR;
 }
 
-int analyseMENOR(TArquivo *arquivo, int initialPositionWord){
+int analyseMAIOR(char *word){
 	return ERR;
 }
 
-int analyseMAIOR(TArquivo *arquivo, int initialPositionWord){
+int analyseMEIG(char *word){
 	return ERR;
 }
 
-int analyseMEIG(TArquivo *arquivo, int initialPositionWord){
+int analyseMAIG(char *word){
 	return ERR;
 }
 
-int analyseMAIG(TArquivo *arquivo, int initialPositionWord){
+int analyseIG(char *word){
 	return ERR;
 }
 
-int analyseIG(TArquivo *arquivo, int initialPositionWord){
+int analyseSOM(char *word){
 	return ERR;
 }
 
-int analyseSOM(TArquivo *arquivo, int initialPositionWord){
+int analyseSUB(char *word){
 	return ERR;
 }
 
-int analyseSUB(TArquivo *arquivo, int initialPositionWord){
+int analyseMUL(char *word){
 	return ERR;
 }
 
-int analyseMUL(TArquivo *arquivo, int initialPositionWord){
+int analyseDIV(char *word){
 	return ERR;
 }
 
-int analyseDIV(TArquivo *arquivo, int initialPositionWord){
+int analyseAP(char *word){
 	return ERR;
 }
 
-int analyseAP(TArquivo *arquivo, int initialPositionWord){
+int analyseFP(char *word){
 	return ERR;
 }
 
-int analyseFP(TArquivo *arquivo, int initialPositionWord){
+int analyseNUM(char *word){
 	return ERR;
 }
 
-int analyseNUM(TArquivo *arquivo, int initialPositionWord){
-	return ERR;
-}
-
-int analyseID(TArquivo *arquivo, int initialPositionWord){
+int analyseID(char *word){
 	return ERR;
 }
