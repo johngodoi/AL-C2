@@ -29,6 +29,16 @@ int analyse(int analyser, char *word){
 	switch(analyser){
 	case PR:
 		return analysePR(word);
+	case AT:
+		return analyseAT(word);
+	case MENOR:
+		return analyseMENOR(word);
+	case MAIOR:
+		return analyseMAIOR(word);
+	case MEIG:
+		return analyseMEIG(word);
+	case MAIG:
+		return analyseMAIG(word);
 	default:
 		return ERR;
 	}
