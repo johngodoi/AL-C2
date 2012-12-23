@@ -11,8 +11,8 @@ void carrega_caracteres(TArquivo *arquivo, FILE *entrada);
 void carrega_posicoes(TArquivo *arquivo);
 void alocaVetores(TArquivo *arquivo);
 int verifyEmptyChars(char c);
-char * translateTokenIDToName(int token);
-void printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida);
+void translateTokenIDToName(int token, FILE *saida);
+char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida);
 
 TArquivo* carrega_arquivo(FILE *entrada) {
 
@@ -102,13 +102,15 @@ int verifyEmptyChars(char c) {
 
 void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
 	int i;
+	char c;
 	for(i=0;i<arquivo->tam_positions;i++){
-		printWord(arquivo,i,saida);
-		fprintf(saida,"<%s>",translateTokenIDToName(arquivo->buffer_convertido[i]));
+		c=printWord(arquivo,i,saida);
+		translateTokenIDToName(arquivo->buffer_convertido[i], saida);
+		fputc(c,saida);
 	}
 }
 
-void printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
+char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
 	int i=arquivo->buffer_positions[firstCharWordPosition];
 	char c=arquivo->buffer_original[i];
 	while(verifyEmptyChars(c)!=1){
@@ -116,8 +118,10 @@ void printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
 		i++;
 		c=arquivo->buffer_original[i];
 	}
+	return c;
 }
-char * translateTokenIDToName(int token){
-	char **tokenNames = {"ERR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID","PR"};
-	return tokenNames[token];
+
+void translateTokenIDToName(int token, FILE *saida){
+	char *tokenNames[] = {"ERR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID","PR"};
+	fprintf(saida,"<%s> ",tokenNames[token]);
 }

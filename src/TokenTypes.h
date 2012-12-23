@@ -8,7 +8,7 @@
 #ifndef TOKENTYPES_H_
 #define TOKENTYPES_H_
 
-enum Tokens{ ERR, AT, MENOR, MAIOR, MEIG, MAIG, IG, SOM, SUB, MUL, DIV, AP, FP, NUM, ID, PR}TTokens;
+enum Tokens{ ERR, PR, AT, MENOR, MAIOR, MEIG, MAIG, IG, SOM, SUB, MUL, DIV, AP, FP, NUM, ID}TTokens;
 
 typedef enum TTokens TokensType;
 
