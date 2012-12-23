@@ -16,32 +16,32 @@ int analysePR(char *word){
 
 int analyseAT(char *word){
 	int result = ERR;
-	if(strcmp(word,"=")) result = AT;	
-	return ERR;
+	if(strcmp(word,"=")==0) result = AT;
+	return result;
 }
 
 int analyseMENOR(char *word){
 	int result = ERR;
-	if(strcmp(word,"<")) result = MENOR;
-	return ERR;
+	if(strcmp(word,"<")==0) result = MENOR;
+	return result;
 }
 
 int analyseMAIOR(char *word){
 	int result = ERR;
-	if(strcmp(word,">")) result = MAIOR;
-	return ERR;
+	if(strcmp(word,">")==0) result = MAIOR;
+	return result;
 }
 
 int analyseMEIG(char *word){
 	int result = ERR;
-	if(strcmp(word,"<=")) result = MEIG;
-	return ERR;
+	if(strcmp(word,"<=")==0) result = MEIG;
+	return result;
 }
 
 int analyseMAIG(char *word){
 	int result = ERR;
-	if(strcmp(word,">=")) result = MAIG;
-	return ERR;
+	if(strcmp(word,">=")==0) result = MAIG;
+	return result;
 }
 
 int analyseIG(char *word){

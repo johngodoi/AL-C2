@@ -1,5 +1,5 @@
-a <ERR> = <ERR> 2 <ERR>
-b <ERR> = <ERR> 4 <ERR>
-area <ERR> = <ERR> ( <ERR> b <ERR> * <ERR> a <ERR> ) <ERR> / <ERR> 2 <ERR>
-if <PR> ( <ERR> area <ERR> > <ERR> 10 <ERR> ) <ERR> x <ERR> = <ERR> 1 <ERR>
-else <PR> x <ERR> = <ERR> 0 <ERR>
+a <ERR> = <AT> 2 <ERR>
+b <ERR> = <AT> 4 <ERR>
+area <ERR> = <AT> ( <ERR> b <ERR> * <ERR> a <ERR> ) <ERR> / <ERR> 2 <ERR>
+if <PR> ( <ERR> area <ERR> > <MAIOR> 10 <ERR> ) <ERR> x <ERR> = <AT> 1 <ERR>
+else <PR> x <ERR> = <AT> 0 <ERR>
