@@ -11,6 +11,8 @@ void carrega_caracteres(TArquivo *arquivo, FILE *entrada);
 void carrega_posicoes(TArquivo *arquivo);
 void alocaVetores(TArquivo *arquivo);
 int verifyEmptyChars(char c);
+char * translateTokenIDToName(int token);
+void printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida);
 
 TArquivo* carrega_arquivo(FILE *entrada) {
 
@@ -28,6 +30,7 @@ TArquivo* carrega_arquivo(FILE *entrada) {
 
 void alocaVetores(TArquivo *arquivo){
 	arquivo->buffer_original = (char*) malloc(sizeof(char) * arquivo->tam_file);
+	arquivo->buffer_convertido = (int*) malloc(sizeof(int) * arquivo->tam_positions);
 	arquivo->buffer_positions = (int*) malloc(sizeof(int) * arquivo->tam_positions);
 }
 
@@ -98,5 +101,23 @@ int verifyEmptyChars(char c) {
 }
 
 void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
+	int i;
+	for(i=0;i<arquivo->tam_positions;i++){
+		printWord(arquivo,i,saida);
+		fprintf(saida,"<%s>",translateTokenIDToName(arquivo->buffer_convertido[i]));
+	}
+}
 
+void printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida){
+	int i=arquivo->buffer_positions[firstCharWordPosition];
+	char c=arquivo->buffer_original[i];
+	while(verifyEmptyChars(c)!=1){
+		fputc(c,saida);
+		i++;
+		c=arquivo->buffer_original[i];
+	}
+}
+char * translateTokenIDToName(int token){
+	char **tokenNames = {"ERR","AT","MENOR","MAIOR","MEIG","MAIG","IG","SOM","SUB","MUL","DIV","AP","FP","NUM","ID","PR"};
+	return tokenNames[token];
 }
