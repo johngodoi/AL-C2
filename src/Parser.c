@@ -8,3 +8,8 @@
 #include "Parser.h"
 
 
+void process(TArquivo *arquivo){
+
+	int result = ERR;
+
+}
