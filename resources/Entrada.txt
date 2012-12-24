@@ -3,5 +3,6 @@ b = 4 ;
 area = ( b * a ) / 2
 if ( area >= 10 ) vitor87Lima = 50473
 else if ( area <= 20 ) john89Godoi = 50446
+else 8True == False
 
 
