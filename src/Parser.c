@@ -13,6 +13,7 @@
 #include "Parser.h"
 #include "stdlib.h"
 
+//private declarations
 int analyse( int analyser, char *word);
 char * recoverWord(TArquivo *arquivo,int initialPositionWord);
 
