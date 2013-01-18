@@ -59,8 +59,8 @@ void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada) {
 		arquivo->tam_file++;
 	}
 	//correção de leitura de char estranho ao final do arquivo
-	printf("TamFile: %d\n", arquivo->tam_file--);
-	printf("QtdPalavras: %d\n", arquivo->tam_positions--);
+	arquivo->tam_file--;
+	arquivo->tam_positions--;
 
 	rewind(entrada);
 }
@@ -70,8 +70,6 @@ void carrega_caracteres(TArquivo *arquivo, FILE *entrada) {
 	for (i = 0; i < arquivo->tam_file; i++) {
 		arquivo->buffer_original[i] = fgetc(entrada);
 	}
-	printf("Buffer:%s", arquivo->buffer_original);
-
 	rewind(entrada);
 }
 
@@ -88,14 +86,11 @@ void carrega_posicoes(TArquivo *arquivo) {
 		if(emptyCharFlag == 1 && isEmptyChars != 1) {
 			arquivo->buffer_positions[j]=i;
 			emptyCharFlag = 0;
-			printf("Posição da palavra: %d\n",arquivo->buffer_positions[j]);
 			j++;
 		} else if(isEmptyChars==1){
 			emptyCharFlag = 1;
 		}
 	}
-
-	printf("QtdPalavras identificadas: %d\n", j);
 }
 
 void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
