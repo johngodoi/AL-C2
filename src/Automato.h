@@ -12,12 +12,11 @@
 #ifndef AUTOMATO_H_
 #define AUTOMATO_H_
 
-Automato allocate(FILE *configuracao);
-
-Automato load(Automato automato, FILE *configuracao);
-
 Automato inicializaAutomato(FILE *configuracao);
 
+int analyse(Automato automato, int entry, int currentState);
+
+int isFinalState(Automato automato, int state);
 
 
 #endif /* AUTOMATO_H_ */

@@ -17,19 +17,26 @@ int main(int argc, char **argv) {
 
 	FILE *entrada;
 	FILE *saida;
+	FILE *automatoFile;
 	TArquivo *context;
+	Automato *automato;
 
 	if ((entrada = fopen("resources/Entrada.txt", "r+")) != NULL) {
 		context = preProcess(entrada);
 
-		process(context,entrada);
+		if((automatoFile = fopen("resources/Automato.txt", "r+")) != NULL){
+			automato=inicializaAutomato(automatoFile);
 
-		//if ((saida = fopen("resources/Saida.txt", "w")) != NULL) {
-			//escreve_arquivo_resultado(context,saida);
-			//fclose(saida);
-		//}else{
-			//printf("Falha ao escrever resultado");
-		//}
+			if ((saida = fopen("resources/Saida.txt", "w+")) != NULL) {
+				process(automato,context,entrada,saida);
+				fclose(saida);
+			}else{
+				printf("Falha ao criar arquivo de saida");
+			}
+		}
+		else{
+			printf("Falha ao carregar automato");
+		}
 		fclose(entrada);
 	}else{
 		printf("Falha ao abrir o arquivo");

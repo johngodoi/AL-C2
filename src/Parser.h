@@ -15,6 +15,6 @@
 #ifndef PARSER_H_
 #define PARSER_H_
 
-void process(TArquivo *context, FILE *entrada);
+void process(Automato automato, TArquivo *context, FILE *entrada, FILE *saida);
 
 #endif /* PARSER_H_ */

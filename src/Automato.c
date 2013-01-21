@@ -41,3 +41,11 @@ Automato inicializaAutomato(FILE *configuracao) {
 
 	return automato;
 }
+
+int analyse(Automato automato, int entry, int currentState){
+	return ERR;
+}
+
+int isFinalState(Automato automato, int state){
+	return state;
+}

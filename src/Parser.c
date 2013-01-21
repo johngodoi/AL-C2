@@ -11,25 +11,30 @@
  */
 
 #include "Parser.h"
+#include "DefinicaoAutomato.h"
+#include "Automato.h"
 #include "stdlib.h"
 
 //private declarations
-int analyse(int automatoState, char character);
+int analyse(Automato automato, int automatoState, char character);
 char * recoverWord(TArquivo *arquivo, int initialPositionWord);
 
-void process(TArquivo *context, FILE *entrada) {
+void process(Automato automato, TArquivo *context, FILE *entrada, FILE *saida) {
 	int i;
 	for (i = 0; i < context->tam_file; i++) {
 		int currentAutomatoState = ERR;
 		char character=fgetc(entrada);
-		currentAutomatoState = analyse(currentAutomatoState, character);
-		if(currentAutomatoState != ERR){
-		//if currentAutomatoState is in a acceptation state write string readed and its result following exercise definition
+		currentAutomatoState = analyse(automato, currentAutomatoState, character);
+		if(currentAutomatoState == isFinalState(automato,currentAutomatoState)){
+			//recoverWord from char after last char on last lexema recognized
+			//currentState is initial again
+			//write string readed and its result following exercise definition
 		}
 	}
+	rewind(entrada);
 }
 
-int analyse(int currentAutomatoState, char character) {
+int analyse(Automato automato, int currentAutomatoState, char character) {
 	//convert to a EntryType
 	//analyse for reserved word
 	//call automato analysis with currentState and character

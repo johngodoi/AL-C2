@@ -9,9 +9,11 @@
 #define DEFINICAOAUTOMATO_H_
 
 typedef int** MatrizEstado;
+typedef int* VetorEstadosFinais;
 
 typedef struct {
 	MatrizEstado matrizEstado;
+	VetorEstadosFinais estadosFinais;
 	int estadoAtual;
 	int quantidadeDeEstados;
 	int quantidadeDeSimbolos;
