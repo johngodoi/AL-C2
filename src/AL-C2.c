@@ -17,19 +17,19 @@ int main(int argc, char **argv) {
 
 	FILE *entrada;
 	FILE *saida;
-	TArquivo *arquivo;
+	TArquivo *context;
 
 	if ((entrada = fopen("resources/Entrada.txt", "r+")) != NULL) {
-		arquivo = carrega_arquivo(entrada);
+		context = preProcess(entrada);
 
-		process(arquivo);
+		process(context,entrada);
 
-		if ((saida = fopen("resources/Saida.txt", "w")) != NULL) {
-			escreve_arquivo_resultado(arquivo,saida);
-			fclose(saida);
-		}else{
-			printf("Falha ao escrever resultado");
-		}
+		//if ((saida = fopen("resources/Saida.txt", "w")) != NULL) {
+			//escreve_arquivo_resultado(context,saida);
+			//fclose(saida);
+		//}else{
+			//printf("Falha ao escrever resultado");
+		//}
 		fclose(entrada);
 	}else{
 		printf("Falha ao abrir o arquivo");

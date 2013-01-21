@@ -10,9 +10,11 @@
  ============================================================================
 */
 
+#include "stdio.h"
+
 #ifndef PARSER_H_
 #define PARSER_H_
 
-void process(TArquivo *arquivo);
+void process(TArquivo *context, FILE *entrada);
 
 #endif /* PARSER_H_ */

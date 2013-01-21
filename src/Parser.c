@@ -17,18 +17,21 @@
 int analyse(int automatoState, char character);
 char * recoverWord(TArquivo *arquivo, int initialPositionWord);
 
-void process(TArquivo *arquivo) {
+void process(TArquivo *context, FILE *entrada) {
 	int i;
-	for (i = 0; i < arquivo->tam_file; i++) {
+	for (i = 0; i < context->tam_file; i++) {
 		int currentAutomatoState = ERR;
-		char character;
-		//word = recoverWord(arquivo,i);
+		char character=fgetc(entrada);
 		currentAutomatoState = analyse(currentAutomatoState, character);
+		if(currentAutomatoState != ERR){
 		//if currentAutomatoState is in a acceptation state write string readed and its result following exercise definition
+		}
 	}
 }
 
 int analyse(int currentAutomatoState, char character) {
+	//convert to a EntryType
+	//analyse for reserved word
 	//call automato analysis with currentState and character
 	return ERR;
 }

@@ -11,22 +11,22 @@
 
 #include "file.h"
 
-void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada);
-void carrega_caracteres(TArquivo *arquivo, FILE *entrada);
-void carrega_posicoes(TArquivo *arquivo);
+void calculaQuantidade_caracter(TArquivo *arquivo, FILE *entrada);
+void carregaCaracteres(TArquivo *arquivo, FILE *entrada);
+void carregaPosicoes(TArquivo *arquivo);
 void alocaVetores(TArquivo *arquivo);
 void translateTokenIDToName(int token, FILE *saida);
 char printWord(TArquivo *arquivo, int firstCharWordPosition, FILE *saida);
 
-TArquivo* carrega_arquivo(FILE *entrada) {
+TArquivo* preProcess(FILE *entrada) {
 
 	TArquivo* arquivo = (TArquivo*) malloc(sizeof(TArquivo));
 
 	if (arquivo != NULL) {
-		calcula_quantidade_caracter(arquivo, entrada);
+		calculaQuantidadeCaracter(arquivo, entrada);
 		alocaVetores(arquivo);
-		carrega_caracteres(arquivo, entrada);
-		carrega_posicoes(arquivo);
+		carregaCaracteres(arquivo, entrada);
+		carregaPosicoes(arquivo);
 	}
 	rewind(entrada);
 	return arquivo;
@@ -38,7 +38,7 @@ void alocaVetores(TArquivo *arquivo){
 	arquivo->buffer_positions = (int*) malloc(sizeof(int) * arquivo->tam_positions);
 }
 
-void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada) {
+void calculaQuantidadeCaracter(TArquivo *arquivo, FILE *entrada) {
 	char c;
 	//viu um caracter vazio indicando o inicio de uma nova palavra
 	int emptyCharFlag = 1;
@@ -65,7 +65,7 @@ void calcula_quantidade_caracter(TArquivo *arquivo, FILE *entrada) {
 	rewind(entrada);
 }
 
-void carrega_caracteres(TArquivo *arquivo, FILE *entrada) {
+void carregaCaracteres(TArquivo *arquivo, FILE *entrada) {
 	int i = 0;
 	for (i = 0; i < arquivo->tam_file; i++) {
 		arquivo->buffer_original[i] = fgetc(entrada);
@@ -73,7 +73,7 @@ void carrega_caracteres(TArquivo *arquivo, FILE *entrada) {
 	rewind(entrada);
 }
 
-void carrega_posicoes(TArquivo *arquivo) {
+void carregaPosicoes(TArquivo *arquivo) {
 	char c;
 	//viu um caracter vazio indicando o inicio de uma nova palavra
 	int emptyCharFlag = 1;
@@ -93,7 +93,7 @@ void carrega_posicoes(TArquivo *arquivo) {
 	}
 }
 
-void escreve_arquivo_resultado(TArquivo *arquivo, FILE *saida){
+void escreveArquivoResultado(TArquivo *arquivo, FILE *saida){
 	int i;
 	char c;
 	for(i=0;i<arquivo->tam_positions;i++){
