@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "file.h"
 #include "Parser.h"
+#include "DefinicaoAutomato.h"
 
 int main(int argc, char **argv) {
 

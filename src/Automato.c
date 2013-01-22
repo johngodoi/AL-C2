@@ -5,6 +5,7 @@
  *      Author: john.henrique
  */
 #include "Automato.h"
+#include "TokenTypes.h"
 
 Automato allocate(FILE *configuracao) {
 	Automato automato = (Automato) malloc(sizeof(TipoAutomato));

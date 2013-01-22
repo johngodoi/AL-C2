@@ -11,6 +11,8 @@
 */
 
 #include "stdio.h"
+#include "DefinicaoAutomato.h"
+#include "ArquivoTypes.h"
 
 #ifndef PARSER_H_
 #define PARSER_H_
