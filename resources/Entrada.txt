@@ -1,8 +1,13 @@
-a = 2 ;
-b = 4 ;
-area = ( b * a ) / 2
-if ( area >= 10 ) vitor87Lima = 50473
-else if ( area <= 20 ) john89Godoi = 50446
-else 8True == False
-
-
+{ Sample program
+  in TINY language -
+  computes factorial
+}
+read x; { input an integer }
+if 0 < x then { don't compute if x <= 0 }
+  fact := 1;
+  repeat
+    fact := fact * x;
+    x := x - 1
+  until x = 0;
+  write fact  { output factorial of x }
+end

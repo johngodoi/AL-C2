@@ -1,6 +1,0 @@
-a <ID> = <AT> 2 <NUM> ; <ERR>
-b <ID> = <AT> 4 <NUM> ; <ERR>
-area <ID> = <AT> ( <AP> b <ID> * <MUL> a <ID> ) <FP> / <DIV> 2 <NUM>
-if <PR> ( <AP> area <ID> >= <MAIG> 10 <NUM> ) <FP> vitor87Lima <ID> = <AT> 50473 <NUM>
-else <PR> if <PR> ( <AP> area <ID> <= <MEIG> 20 <NUM> ) <FP> john89Godoi <ID> = <AT> 50446 <NUM>
-else <PR> 8True <ERR> == <IG> False <ID>
