@@ -11,7 +11,7 @@
 
 #include "file.h"
 
-void calculaQuantidade_caracter(TArquivo *arquivo, FILE *entrada);
+void calculaQuantidadeCaracter(TArquivo *arquivo, FILE *entrada);
 void carregaCaracteres(TArquivo *arquivo, FILE *entrada);
 void carregaPosicoes(TArquivo *arquivo);
 void alocaVetores(TArquivo *arquivo);

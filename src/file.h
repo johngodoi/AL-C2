@@ -16,7 +16,7 @@
 #ifndef FILEH
 #define FILEH
 
-TArquivo* pre_process(FILE *entrada);
+TArquivo* preProcess(FILE *entrada);
 void escreveArquivoResultado(TArquivo *arquivo, FILE *saida);
 #endif
 
