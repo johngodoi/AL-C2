@@ -62,9 +62,9 @@ Automato inicializaAutomato(FILE *configuracao) {
 }
 
 int analyse(Automato automato, int entry, int currentState){
-	return ERR;
+	return automato->matrizEstado[currentState][entry];
 }
 
-int isFinalState(Automato automato, int state){
-	return state;
+int isFinalState(Automato automato, int estate){
+	return automato->estadosFinais[estate];
 }

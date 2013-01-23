@@ -16,7 +16,7 @@ Automato inicializaAutomato(FILE *configuracao);
 
 int analyse(Automato automato, int entry, int currentState);
 
-int isFinalState(Automato automato, int state);
+int isFinalState(Automato automato, int estate);
 
 
 #endif /* AUTOMATO_H_ */
