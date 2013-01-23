@@ -13,6 +13,7 @@ typedef int* VetorEstadosFinais;
 
 typedef struct {
 	MatrizEstado matrizEstado;
+	MatrizEstado matrizEstadoConsumoChar;
 	VetorEstadosFinais estadosFinais;
 	int estadoAtual;
 	int quantidadeDeEstados;

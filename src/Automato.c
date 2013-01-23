@@ -5,11 +5,14 @@
  *      Author: john.henrique
  */
 #include "Automato.h"
+#include "DefinicaoAutomato.h"
 #include "TokenTypes.h"
 
 Automato allocate(FILE *configuracao) {
 	Automato automato = (Automato) malloc(sizeof(TipoAutomato));
 	MatrizEstado matriz;
+	MatrizEstado matrizConsumo;
+	VetorEstadosFinais vetorEstadosFinais;
 	int i;
 
 	fscanf(configuracao,"%d", &automato->quantidadeDeEstados);
@@ -18,29 +21,43 @@ Automato allocate(FILE *configuracao) {
 	fgetc(configuracao);
 
 	matriz = (MatrizEstado) malloc(
-			automato->quantidadeDeEstados * sizeof(int*));
-	for (i = 0; i < automato->quantidadeDeSimbolos; i++)
-		matriz[i] = (int*) malloc(automato->quantidadeDeSimbolos * sizeof(int));
+			automato->quantidadeDeSimbolos * sizeof(int*));
+	matrizConsumo = (MatrizEstado) malloc(
+			automato->quantidadeDeSimbolos * sizeof(int*));
+	vetorEstadosFinais = (VetorEstadosFinais) malloc(
+			automato->quantidadeDeEstados * sizeof(int));
+	for (i = 0; i < automato->quantidadeDeEstados; i++){
+		matriz[i] = (int*) malloc(automato->quantidadeDeEstados * sizeof(int));
+		matrizConsumo[i] = (int*) malloc(automato->quantidadeDeEstados * sizeof(int));
+	}
 	automato->matrizEstado = matriz;
+	automato->matrizEstadoConsumoChar = matrizConsumo;
+	automato->estadosFinais=vetorEstadosFinais;
 	automato->estadoAtual = 0;
 	return automato;
 }
 
-Automato load(Automato automato, FILE *configuracao) {
+Automato loadMatrizEstado(Automato automato, FILE *configuracao) {
 	int j;
 	int i;
-	for (j = 0; j < automato->quantidadeDeEstados; j++)
-		for (i = 0; i < automato->quantidadeDeSimbolos; i++) {
-			fscanf(configuracao,"%d",&automato->matrizEstado[j][i]);
+	for (j = 0; j < automato->quantidadeDeSimbolos; j++){
+		int value;
+		for (i = 0; i < automato->quantidadeDeEstados; i++) {
+			fscanf(configuracao,"%d",&value);
+			automato->matrizEstado[j][i]=value;
 			fgetc(configuracao);
 		}
+		fscanf(configuracao,"%d",&value);
+		automato->estadosFinais[j]=value;
+		fgetc(configuracao);
+	}
 	return automato;
 }
 
 Automato inicializaAutomato(FILE *configuracao) {
 	Automato automato = allocate(configuracao);
-	automato = load(automato, configuracao);
-
+	automato = loadMatrizEstado(automato, configuracao);
+	//automato = load
 	return automato;
 }
 
