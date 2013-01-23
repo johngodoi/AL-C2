@@ -16,7 +16,6 @@ Automato allocate(FILE *configuracao) {
 	fgetc(configuracao);
 	fscanf(configuracao,"%d", &automato->quantidadeDeSimbolos);
 	fgetc(configuracao);
-
 	matriz = (MatrizEstado) malloc(
 			automato->quantidadeDeEstados * sizeof(int*));
 	for (i = 0; i < automato->quantidadeDeSimbolos; i++)
